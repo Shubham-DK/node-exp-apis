@@ -1,6 +1,6 @@
 const express = require("express");
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 const app = express();
 
@@ -9,5 +9,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Running on ${port}`);
+  console.log(`Node Express Server Running on ${port}`);
 });
